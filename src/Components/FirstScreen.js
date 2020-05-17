@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SecondScreen from './SecondScreen';
+import {Link} from 'react-router-dom';
 
 class FirstScreen extends Component {
     constructor(props) {
@@ -50,7 +51,11 @@ class FirstScreen extends Component {
                 <h1 style={mystyle} > Admit Kard </h1>
                 <h2 style={mystyle1}> Enter Your Mobile Number</h2>
                 <input  type = "text" ref = {this.inputRef}  onChange = {this.handleChange}/>
+                <Link to="/otp" className="nav-link">
                 <button type = "submit" style={mystyle}> Send OTP </button>
+            </Link>
+               
+                
                 { this.state.render && <SecondScreen number = {this.state.Mobile}/> }
 
                      

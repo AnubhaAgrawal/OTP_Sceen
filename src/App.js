@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import {Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import './App.css';
 import FirstScreen from './Components/FirstScreen';
 import SignInScreen from './Components/SignInScreen';
@@ -10,12 +10,15 @@ function App() {
 
   return (
     <React.Fragment>
-    <FirstScreen/>
-     {/* <Switch>
+    <BrowserRouter>
+      <Switch>
       <Route exact path="/" component={FirstScreen}/>
-        <Route path="/productlist" component={SecondScreen}/>
+        <Route path="/otp" component={SecondScreen}/>
        
-     </Switch>*/}
+     </Switch>
+     </BrowserRouter>
+
+
      
     </React.Fragment>
   );
